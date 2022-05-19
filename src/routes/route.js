@@ -4,7 +4,7 @@ const urlController = require("../controllers/urlController")
 
 
 // Create Url
-router.post("/createUrl", urlController.createUrl)
+router.post("/createUrl", urlController.createUser)
 router.get("/:urlCode", urlController.getUrl)
 
 module.exports = router;
