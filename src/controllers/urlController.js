@@ -46,7 +46,6 @@ const createUrl = async function (req, res) {
         let id = shortid.generate();
         data.urlCode = id
         data.shortUrl = `http:localhost:3000/${id}`;
-
         let urlCreate = await urlModel.create(data);
         let doc = JSON.stringify({ longUrl: urlCreate.longUrl, shortUrl: urlCreate.shortUrl, urlCode: urlCreate.urlCode });
         await SET_ASYNC(`${data.longUrl}`, doc);
